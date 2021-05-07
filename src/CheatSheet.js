@@ -82,29 +82,29 @@ export function deleteRequest(id) {
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
-// SetState in <App />
+/* SetState in <App />
 
-// fetchData() {
-//     getData().then(res => {
-//         return res.data
-//     })
-//         .then(newData => {
-//             this.setState({
-//                 requestState: 'finishedLoading',
-//                 data: newData
-//             })
-//             //catch error and display error screen
-//         }).catch(() => {
-//             this.setState({
-//                 requestState: 'error'
-//             })
-//         })
-// }
-//////////// call fetch method within component did mount /////
+fetchData() {
+    getData().then(res => {
+        return res.data
+    })
+        .then(newData => {
+            this.setState({
+                requestState: 'finishedLoading',
+                data: newData
+            })
+            //catch error and display error screen
+        }).catch(() => {
+            this.setState({
+                requestState: 'error'
+            })
+        })
+}
+////////// call fetch method within component did mount /////
 
-// componentDidMount() {
-//     this.fetchData()
-// }
+componentDidMount() {
+    this.fetchData()
+} */
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -112,3 +112,19 @@ export function deleteRequest(id) {
 // LocalStorage Get and Set
 set - JSON.parse(localStorage.getItem('loggedUser'));
 get - localStorage.setItem('loggedUser', JSON.stringify(res.id));
+
+/*
+
+ELEMENT TYPE || VALUE PROPERTY    || CHANGE CALLBACK || NEW VALUE IN THE CB
+
+text         || value="string"    || onChange        || event.target.value
+
+checkbox     || cheched={boolean} || onChange        || event.target.checked
+
+radio        || cheched={boolean} || onChange        || event.target.checked
+
+<textarea/>  || value="string"    || onChange        || event.target.value
+
+<select/>    || value="option val"|| onChange        || event.target.value
+
+*/

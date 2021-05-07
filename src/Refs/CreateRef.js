@@ -34,7 +34,7 @@ import FRParentInput from './FRParentInput';
 
 // FORWARD REFS ////////////////////////////////////////
 
-export default class App extends Component {
+export default class AppRef extends Component {
   constructor(props) {
     super(props)
     this.state = {
