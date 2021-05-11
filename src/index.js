@@ -9,11 +9,13 @@ import './index.css';
 // import ErrorApp from './ErrorBoundary/ErrorApp';
 // import AppPortal from './Portals/indexPortal';
 // import RenderPropsApp from './RenderProps.js/RenderPropsApp';
-import AnimationRef from './Refs/AnimationRef';
+// import AnimationRef from './Refs/AnimationRef';
+// import RenderProps2App from './RenderProps.js/Example2.js/RenderProps2App';
+import AppHoc2 from './HOC/HOC2.js/AppHoc2'
 
 ReactDOM.render(
   <React.StrictMode>
-    <AnimationRef />
+    <AppHoc2 />
   </React.StrictMode>,
   document.getElementById('root')
 );
