@@ -11,11 +11,12 @@ import './index.css';
 // import RenderPropsApp from './RenderProps.js/RenderPropsApp';
 // import AnimationRef from './Refs/AnimationRef';
 // import RenderProps2App from './RenderProps.js/Example2.js/RenderProps2App';
-import AppHoc2 from './HOC/HOC2.js/AppHoc2'
+// import AppHoc2 from './HOC/HOC2.js/AppHoc2'
+import HooksApp from './Hooks/HooksApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppHoc2 />
+    <HooksApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
