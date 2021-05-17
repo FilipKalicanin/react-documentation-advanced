@@ -13,7 +13,9 @@ import './index.css';
 // import RenderProps2App from './RenderProps.js/Example2.js/RenderProps2App';
 // import AppHoc2 from './HOC/HOC2.js/AppHoc2'
 // import HooksApp from './Hooks/HooksApp';
-import App from './Hooks/HooksExample.js/App';
+// import App from './Hooks/HooksExample.js/App';
+// import Example from './Hooks/ReactDocx/ReactUseEffect';
+import App from './Hooks/ReactDocx/ReactUseContext';
 
 ReactDOM.render(
   <React.StrictMode>
