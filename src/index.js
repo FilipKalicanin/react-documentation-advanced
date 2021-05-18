@@ -15,7 +15,9 @@ import './index.css';
 // import HooksApp from './Hooks/HooksApp';
 // import App from './Hooks/HooksExample.js/App';
 // import Example from './Hooks/ReactDocx/ReactUseEffect';
-import App from './Hooks/ReactDocx/ReactUseContext';
+// import App from './Hooks/ReactDocx/ReactUseContext';
+// import App from './Hooks/ReactDocx/useReducer/ReactUseReducer';
+import App from './Hooks/ReactDocx/useReducer/useReducerWithUseContext.js/App';
 
 ReactDOM.render(
   <React.StrictMode>
