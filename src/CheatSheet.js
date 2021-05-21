@@ -128,3 +128,74 @@ radio        || cheched={boolean} || onChange        || event.target.checked
 <select/>    || value="option val"|| onChange        || event.target.value
 
 */
+
+//////////////
+// LOG IN CLASSIC
+//////////////
+
+function App() {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const onSubmit = async e => {
+        e.preventDefault();
+        setIsLoading(true);
+        setError('');
+
+        try {
+            await login({ username, password });
+            setIsLoggedIn(true);
+            setUsername('');
+            setPassword('');
+            setError('');
+        } catch(error) {
+            setError('Incorrect username or password!');
+        }
+        setIsLoading(false);
+    }
+
+    return (
+        <div>
+            {isLoggedIn ? (
+                <>
+                <h2>Welcome {username}</h2>
+                <button onClick={() => setIsLoggedIn(false)}>LogOut</button>
+                </>
+            ) :
+            <form onSubmit={onSubmit}>
+                {error && <p>{error}</p>}
+                <p>Please Login</p>
+                <input
+                type='text'
+                placeholder="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)} />
+                <input
+                type="password"
+                placeholder="password"
+                autoComplete="new-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)} />
+                <button type="submit" disabled={isLoading}>
+                    {isLoading ? 'Logging in' : 'Log-In'}
+                </button>
+            </form>
+            }
+        </div>
+    )
+}
+
+export default async function login({username, password}) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(username === 'filip' && password === '123') {
+                resolve();
+            } else {
+                reject();
+            }
+        }, 1000);
+    });
+}
